@@ -34,7 +34,7 @@ body {
   
   .become-seller .add-product input,
   .become-seller .add-product textarea {
-    width: 100%;
+    width: 96%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
