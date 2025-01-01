@@ -23,6 +23,7 @@
   padding: 20px;
   gap: 20px;
   flex-wrap: wrap; /* Allow items to wrap on mobile */
+  width:83%
 }
 
 /* Cart Items Section */
