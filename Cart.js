@@ -277,7 +277,7 @@ updateCart();
 
 });
   // Load header.html into the div with id="header"
-  fetch('header.html')
+  fetch('Header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header').innerHTML = data;
