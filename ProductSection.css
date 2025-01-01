@@ -5,6 +5,8 @@
   gap: 40px; /* Larger gap between categories */
   padding: 20px;
   background-color: #f5f5f5;
+  align-items: center;
+  margin:0 auto;
 }
 
 /* Individual Category Card Styles */
