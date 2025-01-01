@@ -67,7 +67,7 @@ const renderProductList = () => {
 document.getElementById('productForm').addEventListener('submit', handleAddProduct);
     // Function to load the header dynamically
     window.onload = function() {
-      fetch('header.html')
+      fetch('Header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('header').innerHTML = data;
