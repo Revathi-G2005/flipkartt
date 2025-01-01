@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details Modal</title>
+  <link rel="stylesheet" href="Product.css">
+</head>
+<body>
+
+  <!-- Overlay Background -->
+  <div class="overlay" id="overlay" onclick="closeModal()"></div>
+
+  <!-- Product Details Modal -->
+  <div class="product-details" id="product-details">
+    <img src="path/to/product-image.jpg" alt="Product Name" id="product-image">
+    <h2 id="product-title">Product Title</h2>
+    <p id="product-description">Product Description or Price</p>
+    <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="buyNow()">Buy Now</button>
+  </div>
+
+  <!-- Product List Example -->
+  <div>
+    <h2>Product List</h2>
+    <div>
+      <button onclick="showProductDetails('Product 1', 'This is a great product.', './assets/iphone.png', 1000)">Show Product 1</button>
+      <button onclick="showProductDetails('Product 2', 'Another amazing product.', './assets/iphone.png', 2000)">Show Product 2</button>
+    </div>
+  </div>
+
+  <script src="Product.js"></script>
+
+</body>
+</html>
+

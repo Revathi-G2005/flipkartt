@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <p>Get access to your Orders, Wishlist, and Recommendations</p>
+      <input
+        type="text"
+        id="email"
+        placeholder="Enter Email/Mobile number"
+      />
+      <button class="otp-btn" onclick="handleOtpRequest()">Request OTP</button>
+      <p class="terms">
+        By continuing, you agree to Flipkart's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+      </p>
+      <p class="new-account">New to Flipkart? <a href="#">Create an account</a></p>
+    </div>
+  </main>
+
+  <script src="Login.js"></script>
+</body>
+</html>

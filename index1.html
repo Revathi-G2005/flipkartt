@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Website</title>
+    
+    <!-- Link to global styles (if any) -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to global styles -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header"></div>
+    
+    <!-- Categories Section -->
+    <div id="categories"></div>
+
+    <!-- Banner Section -->
+    <div id="banner"></div>
+
+
+    <!-- Category Items Section -->
+    <div id="categoryItems"></div>
+
+    <!-- Product Section -->
+    <div id="productSection"></div>
+
+    <!-- Product Details Section -->
+    <div id="productDetails"></div>
+
+    <!-- Cart Section -->
+    <div id="cart"></div>
+
+    <!-- Payment Page Section -->
+    <div id="paymentPage"></div>
+
+    <!-- Become a Seller Section -->
+    <div id="becomeSeller"></div>
+
+    <!-- Login Section -->
+    <div id="login"></div>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to load HTML content into the specified div
+        async function loadContent(divId, fileName, cssFileName = null, jsFileName = null) {
+            try {
+                const response = await fetch(fileName);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${fileName}: ${response.statusText}`);
+                }
+                const content = await response.text();
+                document.getElementById(divId).innerHTML = content;
+
+                // Dynamically load the CSS for the specific section
+                if (cssFileName) {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = cssFileName;
+                    document.head.appendChild(link);
+                }
+
+                // Dynamically load the JavaScript for the specific section
+                if (jsFileName) {
+                    const script = document.createElement('script');
+                    script.src = jsFileName;
+                    script.defer = true; // To ensure the script loads after content
+                    document.body.appendChild(script);
+                }
+            } catch (error) {
+                console.error('Error loading content:', error);
+                document.getElementById(divId).innerHTML = `<p>Failed to load content for ${fileName}</p>`;
+            }
+        }
+
+        // Load all sections dynamically with corresponding CSS and JS files
+        loadContent('header', 'Header.html', 'Header.css', 'Header.js');
+        loadContent('banner', 'Banner.html', 'Banner.css', 'Banner.js');
+        loadContent('categories', 'Categories.html', 'Categories.css', 'Categories.js');
+        loadContent('categoryItems', 'CategoryItems.html', 'CategoryItems.css', 'CategoryItems.js');
+        loadContent('productSection', 'ProductSection.html', 'ProductSection.css', 'ProductSection.js');
+       
+       
+       
+        loadContent('footer', 'Footer.html', 'Footer.css', 'Footer.js');
+    </script>
+
+</body>
+</html>
+

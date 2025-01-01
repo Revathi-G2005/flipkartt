@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="cart-page">
+    <header class="cart-header">
+      <h1>Shopping Cart</h1>
+    </header>
+
+    <div class="cart-container">
+      <div class="cart-items">
+        <h2>Your Cart</h2>
+        <div id="cart-items-container">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h3>Order Summary</h3>
+        <p id="total-items">Items in Cart: 0</p>
+        <p id="total-price">Total Amount: ₹0</p>
+        <button class="checkout" id="checkout-btn" disabled>Proceed to Checkout</button>
+      </div>
+    </div>
+
+    <footer class="cart-footer">
+      <p>&copy; 2024 Flipkart Replica. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="Cart.js"></script>
+
+</body>
+</html>

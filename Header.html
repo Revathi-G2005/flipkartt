@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Header</title>
+  <link rel="stylesheet" href="Header.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/flipkart logo.png" alt="Flipkart Logo" />
+      <small>
+        Explore <span class="plus">Plus ✨</span>
+      </small>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchQuery"
+        placeholder="Search for products..."
+      />
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="index1.html" id="homeLink">
+        <button>Home 🏠</button>
+      </a>
+      <a href="Login.html" id="loginLink">
+        <button>Login ☑️</button>
+      </a>
+      <a href="BecomeSeller.html" id="sellerLink">
+        <button>Become a Seller</button>
+      </a>
+      <a href="Cart.html" id="cartLink">
+        <button>Cart 🛒<span id="cart-count">(0)</span></button>
+      </a>
+    </div>
+
+    <!-- Search Results -->
+    <div id="searchResults" class="search-results" style="display: none;">
+      <ul id="resultsList"></ul>
+      <p id="noResults" class="no-results" style="display: none;">No results found.</p>
+    </div>
+  </header>
+
+  <script src="Header.js"></script>
+</body>
+</html>
