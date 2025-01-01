@@ -82,11 +82,7 @@ if (categoryItems) {
     itemElement.appendChild(itemPrice);
     itemsList.appendChild(itemElement);
   });
-} else {
-  // If no category found, display a message
-  document.getElementById('category-name').textContent = 'Category not found';
-  document.getElementById('items-list').textContent = 'No items available for this category.';
-}
+} 
  // Function to load the header dynamically
  window.onload = function() {
   fetch('header.html')
